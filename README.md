@@ -90,4 +90,30 @@
 * System V 계열에서는 ps-ef를 가장 많이 사용 (ps -ef |grep '프로세스명')
 * BSD 계열에서는 ps aux를 가장 많이 사용 (ps aux | grep '프로세스명') 
 
+### 실행 예시
+
+**System V 계열**
+* ps -ef : 모든 프로세스를 풀 포맷으로 출력
+* ps -ef | grep '프로세스명' : '프로세스명'의 프로세스 구동 확인
+
+**BSD 계열**
+* ps aux : 실행 중인 모든 프로세스 확인
+* ps auxf : 실행 중인 프로세스를 트리구조로 보여줌
+* ps auxfww : 실행 중인 프로세스를 트리구조 + 모든 실행 중인 옵션 확인 가능 
+
+
+### 실행 화면
+
+![ps 화면](https://user-images.githubusercontent.com/104612916/171854617-092516fe-b5cc-4394-a414-12c721bda5b5.jpg)
+
+|행|내용|
+|---|---|
+|UID|실행유저|
+|PID|프로세스 ID|
+|PPID|부모 프로세스 PID|
+|C|CPU 사용량|
+|STIME|Start Time|
+|TTY|프로세스 제어 위치 (콘솔 : tty1, 원격 : pts/1)|
+|TIME|구동시간|
+|CMD|실행 명령어|
 
